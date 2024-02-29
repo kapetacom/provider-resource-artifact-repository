@@ -1,0 +1,72 @@
+kind: core/resource-type-operator
+metadata:
+  name: kapeta/resource-type-npm-repository
+  title: NPM Repository
+  description: Provides a npm repository resource to your block
+  visibility: public
+spec:
+  icon:
+    type: fontawesome5
+    value: fab fa-npm
+  ports:
+    - type: http
+  local:
+    image: verdaccio/verdaccio:5.29.2
+    ports:
+      http:
+        port: 4873
+        type: tcp
+    mounts:
+      conf: /verdaccio/conf
+      storage: /verdaccio/storage
+      plugins: /verdaccio/plugins
+    credentials:
+      username: admin
+      password: admin
+---
+kind: core/resource-type-operator
+metadata:
+  name: kapeta/resource-type-docker-repository
+  title: Docker Repository
+  description: Provides a docker repository resource to your block
+  visibility: public
+spec:
+  icon:
+    type: fontawesome5
+    value: fab fa-docker
+  ports:
+    - type: http
+  local:
+    image: registry:2.8.3
+    ports:
+      http:
+        port: 5000
+        type: tcp
+    mounts:
+      data: /var/lib/registry
+---
+kind: core/resource-type-operator
+metadata:
+  name: kapeta/resource-type-maven-repository
+  title: Maven Repository
+  description: Provides a maven repository resource to your block
+  visibility: public
+spec:
+  icon:
+    type: url
+    value: https://storage.googleapis.com/kapeta-public-cdn/icons/maven.svg
+  ports:
+    - type: http
+  local:
+    image: dzikoysk/reposilite:3.4.6
+    ports:
+      http:
+        port: 8080
+        type: tcp
+    mounts:
+      data: /app/data
+    env:
+      REPOSILITE_OPTS: '--token root:root'
+    credentials:
+      username: root
+      password: root
