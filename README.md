@@ -1,4 +1,4 @@
-# Artifact Repository Resource Provider
+# Artifact Registry Resource Provider
 Provides artifact repository resources to the kapeta eco-system.
 
 ---

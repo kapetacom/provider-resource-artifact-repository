@@ -9,19 +9,19 @@ const resourceLib = {
 
 module.exports = {
     entry: {
-        [`kapeta/resource-type-npm-repository:${packageJson.version}`]: {
+        [`kapeta/resource-type-npm-registry:${packageJson.version}`]: {
             import: Path.resolve(__dirname, './src/web/NPMResourceTypeProvider.ts'),
-            filename: `kapeta/resource-type-npm-repository.js`,
+            filename: `kapeta/resource-type-npm-registry.js`,
             library: resourceLib,
         },
-        [`kapeta/resource-type-maven-repository:${packageJson.version}`]: {
+        [`kapeta/resource-type-maven-registry:${packageJson.version}`]: {
             import: Path.resolve(__dirname, './src/web/MavenResourceTypeProvider.ts'),
-            filename: `kapeta/resource-type-maven-repository.js`,
+            filename: `kapeta/resource-type-maven-registry.js`,
             library: resourceLib,
         },
-        [`kapeta/resource-type-docker-repository:${packageJson.version}`]: {
+        [`kapeta/resource-type-docker-registry:${packageJson.version}`]: {
             import: Path.resolve(__dirname, './src/web/DockerResourceTypeProvider.ts'),
-            filename: `kapeta/resource-type-docker-repository.js`,
+            filename: `kapeta/resource-type-docker-registry.js`,
             library: resourceLib,
         },
     },

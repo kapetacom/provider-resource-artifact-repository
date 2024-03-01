@@ -1,8 +1,8 @@
 kind: core/resource-type-operator
 metadata:
-  name: kapeta/resource-type-npm-repository
-  title: NPM Repository
-  description: Provides a npm repository resource to your block
+  name: kapeta/resource-type-npm-registry
+  title: NPM Registry
+  description: Provides a npm registry resource to your block
   visibility: public
 spec:
   icon:
@@ -26,9 +26,9 @@ spec:
 ---
 kind: core/resource-type-operator
 metadata:
-  name: kapeta/resource-type-docker-repository
-  title: Docker Repository
-  description: Provides a docker repository resource to your block
+  name: kapeta/resource-type-docker-registry
+  title: Docker Registry
+  description: Provides a docker registry resource to your block
   visibility: public
 spec:
   icon:
@@ -47,9 +47,9 @@ spec:
 ---
 kind: core/resource-type-operator
 metadata:
-  name: kapeta/resource-type-maven-repository
-  title: Maven Repository
-  description: Provides a maven repository resource to your block
+  name: kapeta/resource-type-maven-registry
+  title: Maven Registry
+  description: Provides a maven registry resource to your block
   visibility: public
 spec:
   icon:

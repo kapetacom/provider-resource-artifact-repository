@@ -9,19 +9,19 @@ import { FormField } from '@kapeta/ui-web-components';
 
 function validateInstanceName(fieldName: string, value: string) {
     if (!/^[a-z]([a-z0-9_-]*[a-z0-9_])?$/i.test(value)) {
-        throw new Error('Invalid repository name');
+        throw new Error('Invalid registry name');
     }
 }
 
-const RepositoryEditorComponent = () => {
+const RegistryEditorComponent = () => {
     return (
         <FormField
             name={'metadata.name'}
             label={'Name'}
             validation={['required', validateInstanceName]}
-            help={'Name your repository'}
+            help={'Name your registry'}
         />
     );
 };
 
-export default RepositoryEditorComponent;
+export default RegistryEditorComponent;

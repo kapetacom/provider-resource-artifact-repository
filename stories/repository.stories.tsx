@@ -5,16 +5,16 @@
 
 import React from 'react';
 import '@kapeta/ui-web-components/styles/index.less';
-import RepositoryEditorComponent from '../src/web/RepositoryEditorComponent';
+import RegistryEditorComponent from '../src/web/RegistryEditorComponent';
 import { Resource } from '@kapeta/schemas';
 import { FormContainer } from '@kapeta/ui-web-components';
 
-const RESOURCE_KIND = 'kapeta/resource-type-npm-repository';
+const RESOURCE_KIND = 'kapeta/resource-type-npm-registry';
 
-const RepositoryResource: Resource = {
+const RegistryResource: Resource = {
     kind: RESOURCE_KIND,
     metadata: {
-        name: 'MyRepository',
+        name: 'MyRegistry',
     },
     spec: {
         port: {
@@ -24,13 +24,13 @@ const RepositoryResource: Resource = {
 };
 
 export default {
-    title: 'Repository',
+    title: 'Registry',
 };
 
 export const Editor = () => {
     return (
-        <FormContainer initialValue={RepositoryResource}>
-            <RepositoryEditorComponent />
+        <FormContainer initialValue={RegistryResource}>
+            <RegistryEditorComponent />
         </FormContainer>
     );
 };
